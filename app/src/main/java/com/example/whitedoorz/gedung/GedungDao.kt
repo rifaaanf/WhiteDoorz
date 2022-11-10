@@ -16,6 +16,6 @@ interface GedungDao {
     @Query("SELECT * FROM gedung")
     suspend fun getAllGedung(): List<Gedung>
 
-    @Query("SELECT * FROM gedung WHERE id =:gedung_id")
+    @Query("SELECT * FROM gedung WHERE gedung_id =:gedung_id")
     suspend fun getGedung(gedung_id: Int): List<Gedung>
 }
