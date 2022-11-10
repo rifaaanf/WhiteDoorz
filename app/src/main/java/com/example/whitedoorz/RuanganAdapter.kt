@@ -26,7 +26,9 @@ class RuanganAdapter (private var ruangans: ArrayList<Ruangan>, private val list
     override fun onBindViewHolder(holder:RuanganViewHolder, position: Int) {
         val ruangan = ruangans[position]
         holder.view.text_title.text = ruangan.ruangan
-        holder.view.text_title.setOnClickListener {
+        holder.view.text_kapasitas.text = ruangan.kapasitas.toString()
+
+        holder.view.container.setOnClickListener {
             listener.onRead(ruangan)
         }
         holder.view.icon_edit.setOnClickListener {
