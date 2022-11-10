@@ -5,7 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [Ruangan::class], version = 1)
+@Database(entities = [Ruangan::class], version = 2)
 
 
 abstract class RuanganDB: RoomDatabase() {
@@ -25,6 +25,6 @@ abstract class RuanganDB: RoomDatabase() {
             context.applicationContext,
             RuanganDB::class.java,
             "ruangan.db"
-        ).build()
+        ).fallbackToDestructiveMigration().build()
     }
 }

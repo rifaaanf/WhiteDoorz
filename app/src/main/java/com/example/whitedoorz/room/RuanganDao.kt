@@ -16,6 +16,6 @@ interface RuanganDao {
     @Query("SELECT * FROM ruangan")
     suspend fun getAllRuangan(): List<Ruangan>
 
-    @Query("SELECT * FROM ruangan WHERE id =:ruangan_id")
+    @Query("SELECT * FROM ruangan WHERE ruangan_id =:ruangan_id")
     suspend fun getRuangan(ruangan_id: Int): List<Ruangan>
 }

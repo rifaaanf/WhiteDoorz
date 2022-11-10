@@ -49,7 +49,7 @@ class EditActivity : AppCompatActivity() {
         binding.buttonSave.setOnClickListener {
             CoroutineScope(Dispatchers.IO).launch {
                 db.ruanganDao().insertRuangan(
-                    Ruangan(0, binding.editTitle.text.toString(), binding.editKapasitas.text.toString().toInt())
+                    Ruangan(0, binding.editTitle.text.toString(), binding.editKapasitas.text.toString().toInt(), 1)
                 )
                 finish()
             }
@@ -58,7 +58,7 @@ class EditActivity : AppCompatActivity() {
         binding.buttonUpdate.setOnClickListener {
             CoroutineScope(Dispatchers.IO).launch {
                 db.ruanganDao().updateRuangan(
-                    Ruangan(ruanganId, binding.editTitle.text.toString(), binding.editKapasitas.text.toString().toInt())
+                    Ruangan(ruanganId, binding.editTitle.text.toString(), binding.editKapasitas.text.toString().toInt(), 1)
                 )
                 finish()
             }
