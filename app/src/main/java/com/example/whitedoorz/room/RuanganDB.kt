@@ -4,8 +4,9 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.whitedoorz.gedung.Gedung
 
-@Database(entities = [Ruangan::class], version = 2)
+@Database(entities = [Ruangan::class, Gedung::class], version = 3)
 
 
 abstract class RuanganDB: RoomDatabase() {

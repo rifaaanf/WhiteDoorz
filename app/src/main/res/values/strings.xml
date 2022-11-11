@@ -3,4 +3,5 @@
     <string name="kapasitas">Kapasitas:</string>
     <string name="data_ruangan">Data Ruangan</string>
     <string name="data_gedung">Data Gedung</string>
+    <string name="pilih_gedung">Pilih Gedung</string>
 </resources>

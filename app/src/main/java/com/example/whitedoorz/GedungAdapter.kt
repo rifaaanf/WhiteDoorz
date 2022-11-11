@@ -3,12 +3,13 @@ package com.example.whitedoorz
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SpinnerAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.whitedoorz.gedung.Gedung
 import kotlinx.android.synthetic.main.adapter_main.view.*
 
 class GedungAdapter (private var gedungs: ArrayList<Gedung>, private val listener: OnAdapterListener) :
-    RecyclerView.Adapter<GedungAdapter.GedungViewHolder>(){
+    RecyclerView.Adapter<GedungAdapter.GedungViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):GedungViewHolder {
         return GedungViewHolder(
